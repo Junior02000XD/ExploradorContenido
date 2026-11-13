@@ -1,0 +1,70 @@
+@{
+    ViewData["Title"] = "Explorador de contenido aleatorio";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/explorador.css" asp-append-version="true" />
+}
+
+<h1 class="mb-4 text-center">Explorador de contenido aleatorio</h1>
+
+<div class="row g-4">
+    <div class="col-12 col-md-6">
+        <div class="card h-100">
+            <div class="card-header">Citas</div>
+            <div class="card-body">
+                <div id="contenidoCita">
+                    <p id="textoCita" class="cita"></p>
+                    <p id="autorCita" class="text-muted text-end"></p>
+                </div>
+                <p id="estadoCita" class="estado"></p>
+            </div>
+            <div class="card-footer">
+                <button id="btnCita" class="btn btn-primary w-100">Obtener otra cita</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+        <div class="card h-100">
+            <div class="card-header">Perros</div>
+            <div class="card-body">
+                <img id="imgPerro" class="imagen d-none" alt="Foto aleatoria de un perro" />
+                <p id="estadoPerro" class="estado"></p>
+            </div>
+            <div class="card-footer">
+                <button id="btnPerro" class="btn btn-primary w-100">Mostrar otro perro</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+        <div class="card h-100">
+            <div class="card-header">Gatos</div>
+            <div class="card-body">
+                <img id="imgGato" class="imagen d-none" alt="Foto aleatoria de un gato" />
+                <p id="estadoGato" class="estado"></p>
+            </div>
+            <div class="card-footer">
+                <button id="btnGato" class="btn btn-primary w-100">Mostrar otro gato</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+        <div class="card h-100">
+            <div class="card-header">Datos curiosos</div>
+            <div class="card-body">
+                <p id="textoDato"></p>
+                <p id="estadoDato" class="estado"></p>
+            </div>
+            <div class="card-footer">
+                <button id="btnDato" class="btn btn-primary w-100">Mostrar otro dato</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/explorador.js" asp-append-version="true"></script>
+}
